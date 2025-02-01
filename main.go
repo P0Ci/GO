@@ -12,7 +12,7 @@ func setupRouter() *gin.Engine {
         // ctx.String(http.StatusOK, "HELLO WORLD")
         ctx.JSON(http.StatusOK, gin.H{
             "status" :"success",
-            "value": "hello andry",
+            "value": "hello ne-yo",
         })
     })
 
@@ -21,5 +21,5 @@ func setupRouter() *gin.Engine {
 
 func main() {
     r := setupRouter()
-    r.Run(":8000")
+    r.Run(":8080")
 }
