@@ -41,6 +41,14 @@ func setupRouter() *gin.Engine {
         })
     })
 
+    v1.GET("/user/", func(ctx *gin.Context) {
+        query := ctx.Query("name")
+        ctx.JSON(http.StatusOK, gin.H{
+            "status": "success",
+            "value": query,
+        })
+    })
+
 
     return r
 }
